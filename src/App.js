@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { ARCanvas, ARMarker } from "@artcom/react-three-arjs";
+import { Suspense } from "react";
+import { OrbitControls } from '@react-three/drei';
+
+import { House } from "./House";
+import { ThumbGood } from "./ThumbGood";
+import { TwitterLogo } from "./TwitterLogo";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div style={{ width: '100vw', height: '100vh' }}>
+      <ARCanvas
+        camera={ { position: [0, 0, 0] } }
+        onCreated={ ({ gl }) => {
+          gl.setSize(window.innerWidth, window.innerHeight)
+        } }>
+        <ambientLight />
+        <pointLight position={ [10, 10, 0] }  />
+        <ARMarker
+          type={"pattern"}
+          patternUrl={"data/sample.patt"}
+          onMarkerFound={() => console.log(200)}
         >
-          Learn React
-        </a>
-      </header>
+          <Suspense fallback={null}>
+            <House scale={[0.05, 0.05, 0.05]} position={[1, 1, 1]} />
+            <ThumbGood />
+            <TwitterLogo />
+            <OrbitControls />
+          </Suspense>
+        </ARMarker>
+      </ARCanvas>
     </div>
   );
 }
