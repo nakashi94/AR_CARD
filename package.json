@@ -16,7 +16,7 @@
     "three": "^0.142.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://nakashi94.github.io/ARcard",
+  "homepage": "http://nakashi94.github.io/AR-Card",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
