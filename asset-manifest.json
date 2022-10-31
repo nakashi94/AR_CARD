@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/AR_CARD/static/js/main.1fffd1bf.js",
+    "main.js": "/AR_CARD/static/js/main.5bc0ff79.js",
     "index.html": "/AR_CARD/index.html",
-    "main.1fffd1bf.js.map": "/AR_CARD/static/js/main.1fffd1bf.js.map"
+    "main.5bc0ff79.js.map": "/AR_CARD/static/js/main.5bc0ff79.js.map"
   },
   "entrypoints": [
-    "static/js/main.1fffd1bf.js"
+    "static/js/main.5bc0ff79.js"
   ]
 }
