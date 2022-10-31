@@ -22,7 +22,7 @@ function App() {
           onMarkerFound={() => console.log(200)}
         >
           <Suspense fallback={null}>
-            <House scale={[0.05, 0.05, 0.05]} position={[1, 1, 1]} />
+            <House scale={[0.05, 0.05, 0.05]} position={[0, 1, 0]} />
             <ThumbGood />
             <TwitterLogo />
             <OrbitControls />

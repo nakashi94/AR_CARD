@@ -5,5 +5,5 @@ export const ThumbGood = () => {
   const obj = useLoader(OBJLoader, "thumb-good.obj", () => {});
 
   console.log(obj);
-  return <primitive object={obj} scale={0.005}  position={[2, 1, 0]}/>;
+  return <primitive object={obj} scale={0.005}  position={[0, -1, 0]}/>;
 };
